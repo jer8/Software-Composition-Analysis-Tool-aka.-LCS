@@ -1,7 +1,9 @@
 """
 License Compliance Scanner - Backend API
 FastAPI-based backend for scanning dependencies across multiple languages
+
 """
+###
 
 from fastapi import FastAPI, HTTPException, UploadFile, File, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
@@ -552,4 +554,5 @@ async def get_package_license(package_name: str, ecosystem: str = "npm"):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
